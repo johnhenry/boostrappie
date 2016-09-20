@@ -1,6 +1,6 @@
 {
   "name": "bootstrappie",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A script to run scripts",
   "main": "./index.js",
   "bin": {
