@@ -21,5 +21,6 @@ var apply = ({application, args, logger, errorrer})=>{
 
 const logger = console.log.bind(console);
 const errorrer= console.error.bind(console);
+const bootstrappie = (application, args)=>apply({application, args, logger, errorrer});
 
 module.exports = bootstrappie;
