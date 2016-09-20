@@ -1,4 +1,8 @@
-module.exports = ({application, args, logger, errorrer})=>{
+'use strict';
+
+var babelPolyfill = require('babel-polyfill');
+
+var apply = ({application, args, logger, errorrer})=>{
   const result = application(args);
   if(result){
     if(typeof result.then === 'function'){
@@ -14,4 +18,8 @@ module.exports = ({application, args, logger, errorrer})=>{
     return result;
   }
 };
-module.exports.default = module.exports;
+
+const logger = console.log.bind(console);
+const errorrer= console.error.bind(console);
+
+module.exports = bootstrappie;
